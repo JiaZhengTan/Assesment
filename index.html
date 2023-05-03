@@ -122,16 +122,15 @@
       <input type="text" id="phoneNo" v-model="myInput" size="25" maxlength="25" placeholder="Enter your mobile number">
     </div>
 
-
-    <div id="btn">
-      <form id="submit">
-        <button v-if="myInput==173527250" onclick="location.href='page2.html'" target="_blank" id="submit">Check Loyalty
+    <form id="form">
+      <div id="btn">
+        <button id="submit" v-if="myInput==173527250" id="submit">Check Loyalty
           Points</button>
         <button v-else>Check Loyalty Points</button>
         <hr>
-    </div>
+      </div>
     </form>
-  </div>
+  
 
 
   <div id="bottom">
@@ -156,6 +155,8 @@
       const phoneNoValue = phoneNo.value;
       localStorage.clear();
       localStorage.setItem('phone-no', phoneNoValue);
+
+      window.location.href = "page2.html"
     })
   </script>
 </body>
